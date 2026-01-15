@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+    --white: #f5f5f5;
+    --black: #0a0a0b;
+    --grey: #AAAAAA;
+    --wine-red: #5a0f1b;
+    --red: #DC2626;
+    --accent: #FFD700;
+    --grey2: #D9D9D9;
+
+      --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1)
+}
+
+*{
+    font-family: 'Nunito Sans';
+    padding: none;
+    margin: none;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+ a.active{
+    color: var(--accent);
+}
+@keyframes gradient {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+.animate-gradient {
+  animation: gradient 12s ease infinite;
+}
+
+
