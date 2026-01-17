@@ -2,7 +2,6 @@ import Navbar from "../components/Navbar.jsx";
 import "../style.css";
 import Crochet from "../assets/Union.svg";
 import Card from "../components/card.jsx";
-import { Car } from "lucide-react";
 
 function Home() {
   return (
