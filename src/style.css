@@ -18,6 +18,7 @@
   padding: none;
   margin: none;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 html {
@@ -99,9 +100,16 @@ a.active {
 
 .animate-gradient {
   animation: gradient 12s ease infinite;
+  
 }
 
 .Scroll {
+}
+
+
+
+.int:hover{
+  fill: var(--white);
 }
 
 @keyframes scroll {

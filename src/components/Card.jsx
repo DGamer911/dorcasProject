@@ -8,7 +8,7 @@ function Card({ name }) {
       <h3 className="font-medium text-[var(--white)] z-10 lg:leading-7 leading-4 text-lg text-center lg:text-3xl" style={{ fontFamily: "DynaPuff" }}>{name}</h3>
       <button
         style={{ fontFamily: "DynaPuff" }}
-        className="shadow  bg-[var(--white)] mt-3 z-10 lg:text-base  text-black font-bold rounded-2xl lg:rounded-4xl lg:py-[15px] lg:px-[46px]"
+        className="shadow  bg-[var(--white)] hover:bg-[var(--accent)] duration-300 btn mt-3 z-10 lg:text-base  text-black font-bold rounded-2xl lg:rounded-4xl lg:py-[15px] lg:px-[46px]"
       >
         Explore
       </button>
