@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar.jsx";
 import "../style.css";
 import Crochet from "../assets/Union.svg";
-import Card from "../components/card.jsx";
+import Card from "../components/Card.jsx";
 
 function Home() {
   return (
