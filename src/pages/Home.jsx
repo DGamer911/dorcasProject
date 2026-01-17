@@ -61,7 +61,7 @@ function Home() {
         </div>
       </section>
       <section className="w-full bg-[var(--grey)]">
-        <div className="flex mb-10 flex-col relative items-center mt-40 gap-2">
+        <div className="flex mb-10 px-2 flex-col relative items-center mt-40 gap-2">
           <div className="max-w-[800px] w-full bg-[var(--grey2)] border-4 border-[var(--white)] shadow-lg flex flex-col gap-5 items-center rounded-4xl p-12">
             <h5
               style={{ fontFamily: "DynaPuff" }}
@@ -93,7 +93,7 @@ function Home() {
         </div>
       </section>
       <section className="w-full relative  bg-[var(--grey)] flex justify-center items-center">
-        <div className="flex-col flex items-center">
+        <div className="flex-col px-2 flex items-center">
           <img src={Group19} className="sw" alt="" />
           <div className="flex flex-wrap justify-center gap-5">
             <div className="flex flex-col gap-5 items-center">
