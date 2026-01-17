@@ -28,6 +28,30 @@ html{
  a.active{
     color: var(--accent);
 }
+
+.Card{
+  background: url("./assets/img.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+}
+.Card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 32px;
+}
+.Card:hover::before{
+  opacity: 1;
+}
+
 @keyframes gradient {
   0% { background-position: 0% 0%; }
   50% { background-position: 0% 100%; }
@@ -38,4 +62,33 @@ html{
   animation: gradient 12s ease infinite;
 }
 
+.Scroll {
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  
+}
+
+@media (max-width:576px) {
+  .heroText {
+    top: 30%;
+    left: 0;
+  } 
+  .Card::before{
+    
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+    .responsive-text {
+        font-size: 14px;
+    }
+}
 
