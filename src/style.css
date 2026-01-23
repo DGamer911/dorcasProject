@@ -8,6 +8,7 @@
   --red: #dc2626;
   --accent: #ffd700;
   --grey2: #d9d9d9;
+  --white2: rgba(245, 245, 245, .7);
 
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
@@ -19,6 +20,13 @@
   margin: none;
   box-sizing: border-box;
   text-decoration: none;
+}
+
+.imgBanner1{
+  background: url(./assets/img4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 html {
@@ -143,6 +151,9 @@ a.active {
     display: none;
   }
   .sw2 {
+    display: none;
+  }
+  .no-scrollbar::-webkit-scrollbar{
     display: none;
   }
 }
