@@ -13,13 +13,13 @@ function ProductCard({ product }) {
           src={product.image}
           alt={product.name}
         />
-        <div className="z-3 w-full absolute  lg:leading-normal leading-3.5 text-[var(--white)] text-center bottom-[10px]">
+        <div className="z-3 w-full text-shadow-lg absolute  lg:leading-normal leading-4 text-[var(--white)] text-center bottom-[10px]">
           <h3   style={{ fontFamily: "DynaPuff" }}>{product.name}</h3>
           <p   style={{ fontFamily: "DynaPuff", color: "var(--accent)" }} className={isHovered ? "block font-medium" : "hidden font-bold"}>₦{product.price}</p>
     <Link to={`/product/${product.id}`} className="no-underline">
 
           <button   style={{ fontFamily: "DynaPuff" }}
-        className="shadow  bg-[var(--white)] hover:bg-[var(--accent)] duration-300 btn mt-3 z-10 lg:text-base text-sm font-medium lg:leading-normal  text-black lg:font-bold rounded-2xl lg:rounded-4xl rounded-2xl py-1 px-2 lg:py-[12px] lg:px-[46px]">View More</button>
+        className="shadow  bg-[var(--white)] hover:bg-[var(--accent)] duration-300 btn mt-3 z-10 lg:text-base text-base font-medium lg:leading-normal  text-black lg:font-bold rounded-2xl lg:rounded-4xl rounded-2xl py-1 px-5 lg:py-[12px] lg:px-[46px]">View More</button>
     </Link>
         </div>
       </div>

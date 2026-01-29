@@ -84,7 +84,7 @@ function Store() {
               </span>
             </h4>
           </div>
-          <div className="grid grid-cols-3 gap-4 mt-4">
+          <div className="grid lg:grid-cols-3 grid-cols-2 gap-4 mt-4">
             {allProducts.map(product  => (<ProductCard key={product.id} product={product} />)
           )}
           </div>
