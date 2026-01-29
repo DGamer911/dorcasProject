@@ -1,6 +1,8 @@
 import NavBar from "../components/Navbar";
 import "../style.css";
 import { Shirt, Backpack, Key } from "lucide-react";
+import allProducts from "../data/allProducts"
+import ProductCard from "../components/ProductCard.jsx";
 
 function Store() {
   return (
@@ -82,8 +84,9 @@ function Store() {
               </span>
             </h4>
           </div>
-          <div>
-
+          <div className="grid grid-cols-3 gap-4 mt-4">
+            {allProducts.map(product  => (<ProductCard key={product.id} product={product} />)
+          )}
           </div>
         </div>
       </section>
