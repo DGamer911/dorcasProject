@@ -40,52 +40,82 @@ function Home() {
         <Navbar />
 
         <div className="relative mb-15 lg:mt-65 mt-40 flex flex-col items-center">
-          <img
+          <motion.img
             className="lg:w-[388px] w-[288px] mt-8 absolute"
             src={Crochet}
             alt=""
             style={{ transform: "translateY(-38%)" }}
           />
-          <h1
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="z-3 lg:text-8xl text-5xl heroText  text-center leading-9 lg:leading-15 text-shadow-lg font-black "
             style={{
               fontFamily: "DynaPuff",
             }}
           >
-            <span
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className="z-3 text-[var(--white)]"
               style={{ fontFamily: "DynaPuff" }}
             >
               RODDOB'S
-            </span>
+            </motion.span>
             <br></br>
-            <span
+            <motion.span
               className="z-3 text-[var(--grey)]"
               style={{ fontFamily: "DynaPuff" }}
-              q
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
               crochet
-            </span>
-          </h1>
-          <span
+            </motion.span>
+          </motion.h1>
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             style={{ fontFamily: "DynaPuff" }}
             className="text-[var(--white)] z-3 lg:my-3 my-1 text-lg font-medium text-shadow-lg"
           >
             where creativity has no bounds
-          </span>
+          </motion.span>
           <motion.button
-            whileHover={{ scale: 1.05 , background: "var(--accent)"}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05, background: "var(--accent)" }}
             whileTap={{ scale: 0.95 }}
-            
             className=" shadow z-3 bg-[var(--white)] py-3  text-2xl font-bold rounded-4xl"
           >
-            <Link className=" px-15 " style={{ fontFamily: "DynaPuff" }} to="/store">Shop Now</Link>
+            <Link
+              className=" px-15 "
+              style={{ fontFamily: "DynaPuff" }}
+              to="/store"
+            >
+              Shop Now
+            </Link>
           </motion.button>
         </div>
       </section>
       <section className="w-full bg-[var(--grey)]">
         <div className="flex mb-10 px-2 flex-col relative items-center mt-40 gap-2">
-          <div className="max-w-[800px] w-full bg-[var(--grey2)] border-4 border-[var(--white)] shadow-lg flex flex-col gap-5 items-center rounded-4xl p-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="max-w-[800px] w-full bg-[var(--grey2)] border-4 border-[var(--white)] shadow-lg flex flex-col gap-5 items-center rounded-4xl p-12"
+          >
             <h5
               style={{ fontFamily: "DynaPuff" }}
               className="text-2xl font-bold text-shadow-lg text-[var(--white)]"
@@ -103,16 +133,34 @@ function Home() {
               style={{ fontFamily: "DynaPuff" }}
               className=" shadow bg-[var(--white)] hover:bg-[var(--accent)] duration-300m text-nowrap  py-3 text-lg font-bold rounded-4xl"
             >
-               <a className="px-15" style={{ fontFamily: "DynaPuff" }} href="#contactUs">Contact Us</a>
+              <a
+                className="px-15"
+                style={{ fontFamily: "DynaPuff" }}
+                href="#contactUs"
+              >
+                Contact Us
+              </a>
             </button>
-          </div>
+          </motion.div>
           <div className="Scroll flex max-w-[500px] sm:max-w-full lg:max-w-[800px] gap-[14px]">
             <Card name="Crochet Fashion" />
             <Card2 name="Crochet Trinkets" />
             <Card3 name="Crochet Bags" />
           </div>
-          <img className="top-38 absolute start-29 sw1" src={Vector7} alt="" />
-          <img className="top-45 absolute end-29 sw2" src={Vector8} alt="" />
+          <motion.img
+            initial={{ rotate: 0 }}
+            whileHover={{ rotate: 10 }}
+            className="top-38 absolute start-29 sw1"
+            src={Vector7}
+            alt=""
+          />
+          <motion.img
+            initial={{ rotate: 0 }}
+            whileHover={{ rotate: 10 }}
+            className="top-45 absolute end-29 sw2"
+            src={Vector8}
+            alt=""
+          />
         </div>
       </section>
       <section className="w-full relative  bg-[var(--grey)] flex justify-center items-center">
@@ -120,7 +168,10 @@ function Home() {
           <img src={Group19} className="sw" alt="" />
           <div className="flex flex-wrap justify-center gap-5">
             <div className="flex flex-col gap-5 items-center">
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
                 style={{ maxWidth: "480px" }}
                 className="is1 flex-grow-1 justify-between  border-4 border-[var(--white)] shadow-lg bg-[var(--white)] p-4 rounded-2xl flex flex-col gap-2 items-center"
               >
@@ -133,8 +184,11 @@ function Home() {
                   tell us about your design! We're excited to help you create
                   something unique and beautiful.
                 </p>
-              </div>
-              <div
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
                 style={{ maxWidth: "480px" }}
                 className="is2 flex-grow-1 justify-between bg-[var(--white)] border-4 border-[var(--white)] shadow-lg p-4 rounded-2xl flex flex-col gap-2 items-center"
               >
@@ -147,9 +201,14 @@ function Home() {
                   name and how you'd like it styled. We'll create it exactly the
                   way you want it.
                 </p>
-              </div>
+              </motion.div>
             </div>
-            <div className="bg-[var(--white)] lg:w-[300px] w-full p-4 rounded-2xl relative flex flex-col gap-2 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="bg-[var(--white)] lg:w-[300px] w-full p-4 rounded-2xl relative flex flex-col gap-2 items-center"
+            >
               <Pin
                 className="text-[var(--white)] p-4 int w-[50px] h-[50px] bg-[var(--wine-red)] rounded-4xl"
                 size={40}
@@ -167,7 +226,9 @@ function Home() {
                       <span className="font-medium">{question}</span>
                       <span
                         className={
-                          openIndex === index ? "block mt-1 text-sm font-light" : "hidden"
+                          openIndex === index
+                            ? "block mt-1 text-sm font-light"
+                            : "hidden"
                         }
                       >
                         {answer}
@@ -177,9 +238,7 @@ function Home() {
                       <Minus
                         className="w-[24px] h-[24px] rounded-4xl p-1 bg-[var(--grey)] text-[var(--white)]"
                         size={20}
-                                                onClick={() =>
-                          setOpenIndex(null)
-                        }
+                        onClick={() => setOpenIndex(null)}
                       />
                     ) : (
                       <Plus
@@ -199,7 +258,7 @@ function Home() {
                 src={tape}
                 alt=""
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
