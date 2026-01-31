@@ -242,6 +242,9 @@ a.active {
   }
   .radii{
   }
+  .imgCard::before{
+    border-radius: 12px;
+  }
 }
 
 @media (max-width: 768px) {
