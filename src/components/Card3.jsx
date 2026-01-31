@@ -10,7 +10,7 @@ function Card3({ name }) {
         style={{ fontFamily: "DynaPuff" }}
         className="shadow  bg-[var(--white)] hover:bg-[var(--accent)] duration-300 btn mt-3 z-10 lg:text-base  text-black font-bold rounded-2xl lg:rounded-4xl lg:py-[15px] lg:px-[46px]"
       >
-        Explore
+                <a style={{ fontFamily: "DynaPuff" }} href="/store/#bags">Explore</a>
       </button>
     </div>
   );
