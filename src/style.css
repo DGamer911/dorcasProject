@@ -30,6 +30,18 @@
   background-size: cover;
   background-position: center;
 }
+.imgBanner2{
+  background: url(./assets/img1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.imgBanner3{
+  background: url(./assets/img3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 html {
   scroll-behavior: smooth;
@@ -95,6 +107,10 @@ a.active {
 .tape2 {
   transform: translate(50%, 40%);
 }
+
+  .no-scrollbar::-webkit-scrollbar{
+    display: none;
+  }
 
 @keyframes gradient {
   0% {

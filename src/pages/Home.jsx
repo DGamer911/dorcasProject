@@ -9,6 +9,7 @@ import { Heart, Mail, MessageCircle, Pencil, Phone, Pin, Plus } from "lucide-rea
 import tape from "../assets/tape.svg";
 import Footer from "../components/Footer.jsx";
 import ContactUs from "../components/ContactUS.jsx";
+import { motion } from "framer-motion";
 
 function Home() {
   const style =
@@ -23,7 +24,7 @@ function Home() {
       >
         <Navbar />
 
-        <div className="relative mb-15 mt-40 flex flex-col items-center">
+        <div className="relative mb-15 lg:mt-65 mt-40 flex flex-col items-center">
           <img
             className="lg:w-[388px] w-[288px] mt-8 absolute"
             src={Crochet}
@@ -31,37 +32,39 @@ function Home() {
             style={{ transform: "translateY(-38%)" }}
           />
           <h1
-            className="lg:text-8xl text-5xl heroText  text-center leading-9 lg:leading-15 text-shadow-lg font-black "
+            className="z-3 lg:text-8xl text-5xl heroText  text-center leading-9 lg:leading-15 text-shadow-lg font-black "
             style={{
               fontFamily: "DynaPuff",
             }}
           >
             <span
-              className="text-[var(--white)]"
+              className="z-3 text-[var(--white)]"
               style={{ fontFamily: "DynaPuff" }}
             >
               RODDOB'S
             </span>
             <br></br>
             <span
-              className="text-[var(--grey)]"
-              style={{ fontFamily: "DynaPuff" }}
+              className="z-3 text-[var(--grey)]"
+              style={{ fontFamily: "DynaPuff" }}q
             >
               crochet
             </span>
           </h1>
           <span
             style={{ fontFamily: "DynaPuff" }}
-            className="text-[var(--white)] lg:my-3 my-1 text-lg font-medium text-shadow-lg"
+            className="text-[var(--white)] z-3 lg:my-3 my-1 text-lg font-medium text-shadow-lg"
           >
             where creativity has no bounds
           </span>
-          <button
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             style={{ fontFamily: "DynaPuff" }}
-            className=" shadow  bg-[var(--white)]  px-15 py-3 text-2xl font-bold rounded-4xl"
+            className=" shadow z-3 bg-[var(--white)]  px-15 py-3 text-2xl font-bold rounded-4xl"
           >
             Shop Now
-          </button>
+          </motion.button>
         </div>
       </section>
       <section className="w-full bg-[var(--grey)]">
@@ -195,7 +198,9 @@ function Home() {
           </div>
         </div>
       </section>
-     <ContactUs/>
+     <section style={{scrollMarginTop: "80px"}} id="#contactUs" className="w-full bg-[var(--grey)]">
+      <ContactUs/>
+      </section>
       <Footer/>
     </div>
   )

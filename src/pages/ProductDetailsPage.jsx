@@ -22,7 +22,7 @@ function ProductDetails() {
         </div>
       <div className="lg:my-0 my-2">
         <h1 className="lg:text-4xl text-3xl text-center lg:text-start text-[var(--wine-red)] text-shadow-lg font-bold text-wrap max-w-[600px]" style={{ fontFamily: "DynaPuff" }}>{product.name}</h1>
-        <h2 style={{ fontFamily: "DynaPuff" }} className="lg:text-start text-center font-bold text-[var(--wine-red)] text-shadow-lg my-2 text-2xl">₦{product.price}</h2>
+        <h2 style={{ fontFamily: "DynaPuff" }} className="lg:text-start text-center font-bold text-[var(--wine-red)] text-shadow-lg my-2 text-2xl">₦{ new Intl.NumberFormat("en-NG").format(product.price)}</h2>
         <p>{product.description}</p>
         <div className="flex gap-2 border-t border-[var(--grey)] pt-4 mt-5 flex-col">
             {
@@ -41,7 +41,7 @@ function ProductDetails() {
         </div>
         <div className="flex border-t border-[var(--grey)] pt-4 w-full mt-5 gap-2">
             <button onClick={() => navigate(-1)} className="bg-[var(--white)] text-[var(--black)] flex justify-center items-center gap-2 rounded-2xl p-2 w-full duration-300 hover:bg-[var(--whiteHover)]"><ChevronLeft size={18}/>Back</button>
-            <button className="bg-[var(--accent)] text-[var(--black)] rounded-2xl p-2 w-full duration-300 hover:bg-[var(--accentHover)]"><Link className=" flex justify-center items-center gap-2" to="/contactUs"><Phone size={18}/>Contact Us</Link></button>
+            <button className="bg-[var(--accent)] text-[var(--black)] rounded-2xl p-2 w-full duration-300 hover:bg-[var(--accentHover)]"><a className=" flex justify-center items-center gap-2" href="/#contactUs"><Phone size={18}/>Contact Us</a></button>
         </div>
       </div>
     </div>
