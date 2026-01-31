@@ -1,12 +1,14 @@
+import '../style.css'
+
 const Footer = () => {
   return (
-    <footer className="bg-[var(--black)] text-[var(--white)] w-full">
+    <footer style={{fontFamily: "Nunito Sans"}} className="bg-[var(--black)] text-[var(--white)] w-full">
       {/* Top section */}
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
 
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold text-[var(--accent)]">
+          <h2 style={{fontFamily: "DynaPuff"}} className="text-2xl font-bold text-[var(--accent)]">
             Roddob Crochet
           </h2>
           <p className="mt-3 text-sm text-[var(--grey)] italic">
@@ -36,7 +38,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="/contact"
+                href="/#contactUs"
                 className="hover:text-[var(--accent)] transition"
               >
                 Contact Roddob Crochet
