@@ -5,13 +5,28 @@ import Card from "../components/Card.jsx";
 import Vector7 from "../assets/Vector7.svg";
 import Vector8 from "../assets/Vector8.svg";
 import Group19 from "../assets/Group19.svg";
-import { Heart, Mail, MessageCircle, Pencil, Phone, Pin, Plus } from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  Heart,
+  Mail,
+  MessageCircle,
+  Minus,
+  Pencil,
+  Phone,
+  Pin,
+  Plus,
+} from "lucide-react";
 import tape from "../assets/tape.svg";
 import Footer from "../components/Footer.jsx";
 import ContactUs from "../components/ContactUS.jsx";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import FAQs from "../data/FAQs.js";
+import Card3 from "../components/Card3.jsx";
+import Card2 from "../components/Card2.jsx";
 
 function Home() {
+  const [openIndex, setOpenIndex] = useState(null);
   const style =
     "flex justify-between items-center border-b-2 border-[var(--grey2)] py-4";
 
@@ -46,7 +61,8 @@ function Home() {
             <br></br>
             <span
               className="z-3 text-[var(--grey)]"
-              style={{ fontFamily: "DynaPuff" }}q
+              style={{ fontFamily: "DynaPuff" }}
+              q
             >
               crochet
             </span>
@@ -58,12 +74,12 @@ function Home() {
             where creativity has no bounds
           </span>
           <motion.button
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05 , background: "var(--accent)"}}
             whileTap={{ scale: 0.95 }}
-            style={{ fontFamily: "DynaPuff" }}
-            className=" shadow z-3 bg-[var(--white)]  px-15 py-3 text-2xl font-bold rounded-4xl"
+            
+            className=" shadow z-3 bg-[var(--white)] py-3  text-2xl font-bold rounded-4xl"
           >
-            Shop Now
+            <Link className=" px-15 " style={{ fontFamily: "DynaPuff" }} to="/store">Shop Now</Link>
           </motion.button>
         </div>
       </section>
@@ -85,15 +101,15 @@ function Home() {
             </p>
             <button
               style={{ fontFamily: "DynaPuff" }}
-              className=" shadow bg-[var(--white)] hover:bg-[var(--accent)] duration-300m px-15 text-nowrap py-3 text-lg font-bold rounded-4xl"
+              className=" shadow bg-[var(--white)] hover:bg-[var(--accent)] duration-300m text-nowrap  py-3 text-lg font-bold rounded-4xl"
             >
-              Contact Us
+               <a className="px-15" style={{ fontFamily: "DynaPuff" }} href="#contactUs">Contact Us</a>
             </button>
           </div>
           <div className="Scroll flex max-w-[500px] sm:max-w-full lg:max-w-[800px] gap-[14px]">
             <Card name="Crochet Fashion" />
-            <Card name="Crochet Trinkets" />
-            <Card name="Crochet Bags" />
+            <Card2 name="Crochet Trinkets" />
+            <Card3 name="Crochet Bags" />
           </div>
           <img className="top-38 absolute start-29 sw1" src={Vector7} alt="" />
           <img className="top-45 absolute end-29 sw2" src={Vector8} alt="" />
@@ -145,48 +161,37 @@ function Home() {
                 FAQs
               </h3>
               <ul className="w-full flex flex-col">
-                <li className={style}>
-                  <span>Are you a scam</span>
-                  <Plus
-                    className="w-[24px] h-[24px] rounded-4xl p-1 bg-[var(--grey)] text-[var(--white)]"
-                    size={20}
-                  />
-                </li>
-                <li className={style}>
-                  <span>Are you a scam</span>
-                  <Plus
-                    className="w-[24px] h-[24px] rounded-4xl p-1 bg-[var(--grey)] text-[var(--white)]"
-                    size={20}
-                  />
-                </li>
-                <li className={style}>
-                  <span>Are you a scam</span>
-                  <Plus
-                    className="w-[24px] h-[24px] rounded-4xl p-1 bg-[var(--grey)] text-[var(--white)]"
-                    size={20}
-                  />
-                </li>
-                <li className={style}>
-                  <span>Are you a scam</span>
-                  <Plus
-                    className="w-[24px] h-[24px] rounded-4xl p-1 bg-[var(--grey)] text-[var(--white)]"
-                    size={20}
-                  />
-                </li>
-                <li className={style}>
-                  <span>Are you a scam</span>
-                  <Plus
-                    className="w-[24px] h-[24px] rounded-4xl p-1 bg-[var(--grey)] text-[var(--white)]"
-                    size={20}
-                  />
-                </li>
-                <li className={style}>
-                  <span>Are you a scam</span>
-                  <Plus
-                    className="w-[24px] h-[24px] rounded-4xl p-1 bg-[var(--grey)] text-[var(--white)]"
-                    size={20}
-                  />
-                </li>
+                {FAQs.map(({ question, answer }, index) => (
+                  <li className={style} key={index}>
+                    <div className="max-w-[230px]">
+                      <span className="font-medium">{question}</span>
+                      <span
+                        className={
+                          openIndex === index ? "block mt-1 text-sm font-light" : "hidden"
+                        }
+                      >
+                        {answer}
+                      </span>
+                    </div>
+                    {openIndex === index ? (
+                      <Minus
+                        className="w-[24px] h-[24px] rounded-4xl p-1 bg-[var(--grey)] text-[var(--white)]"
+                        size={20}
+                                                onClick={() =>
+                          setOpenIndex(null)
+                        }
+                      />
+                    ) : (
+                      <Plus
+                        onClick={() =>
+                          setOpenIndex(openIndex === index ? null : index)
+                        }
+                        className="w-[24px] h-[24px] rounded-4xl p-1 bg-[var(--grey)] text-[var(--white)]"
+                        size={20}
+                      />
+                    )}
+                  </li>
+                ))}
               </ul>
               <img className="absolute top-0 start-0 tape1" src={tape} alt="" />
               <img
@@ -198,12 +203,16 @@ function Home() {
           </div>
         </div>
       </section>
-     <section style={{scrollMarginTop: "80px"}} id="#contactUs" className="w-full bg-[var(--grey)]">
-      <ContactUs/>
+      <section
+        style={{ scrollMarginTop: "80px" }}
+        id="#contactUs"
+        className="w-full bg-[var(--grey)]"
+      >
+        <ContactUs />
       </section>
-      <Footer/>
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default Home;

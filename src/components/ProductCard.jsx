@@ -8,10 +8,10 @@ function ProductCard({ product }) {
     const [isHovered, setIsHovered] = useState(false);
     
   return (
-      <motion.div initial={{ opacity: 0, y: 20 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease:"easeOut" }} onMouseEnter={() => setIsHovered(prev => !prev)} onMouseLeave={() => setIsHovered(prev => !prev)} className="flex overflow-hidden border-8 border-[var(--white)] lg:rounded-4xl rounded-2xl shadow-lg max-h-[285px] flex-col relative imgCard ">
+      <motion.div initial={{ opacity: 0, y: 20 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease:"easeOut" }} onMouseEnter={() => setIsHovered(prev => !prev)} onMouseLeave={() => setIsHovered(prev => !prev)} className="flex overflow-hidden lg:border-8 border-4 border-[var(--white)] lg:rounded-4xl rounded-2xl shadow-lg max-h-[285px] flex-col relative imgCard ">
         <img
         
-          className="w-full z-1 radii hover:scale-105 duration-300"
+          className="w-full z-1 h-full radii hover:scale-105 duration-300"
           src={product.image}
           alt={product.name}
         />
