@@ -12,7 +12,8 @@ function ContactUS() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: .5 }}
+          viewport={{ once: true }}
           className="max-w-[800px] w-full p-12 gap-3 flex bg-[var(--white)] rounded-4xl flex-col items-center text-center"
         >
           <Phone
@@ -33,7 +34,8 @@ function ContactUS() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+          transition={{ duration: .5 }}
+          viewport={{ once: true }}
             className="bg-[var(--white)] grow-1 flex flex-col gap-4 items-center rounded-2xl p-6"
           >
             <MessageCircle
@@ -58,7 +60,8 @@ function ContactUS() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+          transition={{ duration: .5 }}
+          viewport={{ once: true }}
             className="bg-[var(--white)] grow-1 flex flex-col gap-4 items-center rounded-2xl p-6"
           >
             <Phone
@@ -79,7 +82,8 @@ function ContactUS() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+          transition={{ duration: .5 }}
+          viewport={{ once: true }}
             className="bg-[var(--white)] flex grow-1 flex-col gap-4 items-center rounded-2xl p-6"
           >
             <Mail

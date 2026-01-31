@@ -171,7 +171,8 @@ function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: .5 }}
+          viewport={{ once: true }}
                 style={{ maxWidth: "480px" }}
                 className="is1 flex-grow-1 justify-between  border-4 border-[var(--white)] shadow-lg bg-[var(--white)] p-4 rounded-2xl flex flex-col gap-2 items-center"
               >
@@ -188,7 +189,9 @@ function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
+               transition={{ duration: .5 }}
+          viewport={{ once: true }}
+                
                 style={{ maxWidth: "480px" }}
                 className="is2 flex-grow-1 justify-between bg-[var(--white)] border-4 border-[var(--white)] shadow-lg p-4 rounded-2xl flex flex-col gap-2 items-center"
               >
@@ -206,7 +209,8 @@ function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
+                  transition={{ duration: .5 }}
+          viewport={{ once: true }}
               className="bg-[var(--white)] lg:w-[300px] w-full p-4 rounded-2xl relative flex flex-col gap-2 items-center"
             >
               <Pin

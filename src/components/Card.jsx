@@ -6,8 +6,8 @@ function Card({ name }) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      viewport={{once:true}}
+          transition={{ duration: .5 }}
+          viewport={{ once: true }}
       
       className="sm:h-[300px] w-full justify-end lg:p-5 p-2 h-[230px] text-shadow-lg Card border-4 border-[var(--white)] lg:rounded-4xl rounded-2xl shadow-lg flex flex-col  lg:h-[365px]"
     >
