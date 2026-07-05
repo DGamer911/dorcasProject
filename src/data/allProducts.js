@@ -29,7 +29,7 @@ const allProducts = [
   {
     id: 1,
     name: "Crochet granny square over sized cardigan",
-    price: 20000,
+    price: 16000,
     Review: [" I love this it's so cute and comfy"],
     image: granny,
     rating: 4.8,
@@ -62,7 +62,7 @@ const allProducts = [
   {
     id: 5,
     name: "Crochet  beanies",
-    price: 7000,
+    price: 3000,
     Review: ["  I can't believe this is handmade it looks so neat "],
     image: cap,
     rating: 5,
@@ -84,7 +84,7 @@ const allProducts = [
   {
     id: 7,
     name: "Crochet Granny Square Sunflower Bag",
-    price: 15000,
+    price: 11000,
     Review: [" I love this it's so cute and comfy"],
     image: sdf,
     rating: 5,
@@ -95,7 +95,7 @@ const allProducts = [
   {
     id: 8,
     name: "Crochet Granny Square Cherry Bag",
-    price: 12000,
+    price: 11000,
     Review: [" I love this it's so cute and comfy"],
     image: bin,
     rating: 4.5,
@@ -106,7 +106,7 @@ const allProducts = [
   {
     id: 9,
     name: "Crochet Baby Jacket",
-    price: 15000,
+    price: 12000,
     Review: [" I love this it's so cute and comfy"],
     image: tin,
     rating: 5,
@@ -117,7 +117,7 @@ const allProducts = [
   {
     id: 10,
     name: "Crochet Striped Headband",
-    price: 3000,
+    price: 2000,
     Review: [" I love this it's so cute and comfy"],
     image: fin,
     rating: 4.8,
@@ -150,7 +150,7 @@ const allProducts = [
   {
     id: 13,
     name: "Crochet ruffle hat",
-    price: 7000,
+    price: 5000,
     Review: ["Review.  I bought the blue set and wore it to church, and everyone loved the unique color combination"],
     image: sig,
     rating: 4,
